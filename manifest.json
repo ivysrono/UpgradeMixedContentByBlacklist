@@ -1,10 +1,10 @@
 {
 	"manifest_version": 2,
-	"name": "MixedContentHunter",
-	"version": "0.2.2",
+	"name": "UpgradeMixedContentByBlacklist",
+	"version": "0.2.2.5",
 	"description": "Resloves some mixedcontent blocking.",
 	"icons": {
-		"48": "icons/icon.png"
+		"24": "baseline-enhanced_encryption-24px.svg"
 	},
 	"permissions": [
 		"https://*/*", "webRequest", "webRequestBlocking"

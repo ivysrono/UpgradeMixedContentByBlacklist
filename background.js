@@ -2,6 +2,7 @@
     Modify the CSP
     Copyright (C) 2016 Pascal Ernster
     Copyright (C) 2017 ghost
+    Copyright (C) 2018 ivysrono
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,17 +34,17 @@ function modifyCSP(e) {
 			if (typeof header.value === 'string') {
 				if (header.value.search('upgrade-insecure-requests') === -1) {
 					header.value += ';upgrade-insecure-requests';
-                    CSPMissing = false;
-                }
-            }
-        }
+					CSPMissing = false;
+				}
+			}
+		}
 	}
 	if (CSPMissing) {
-		e.responseHeaders.push({name: 'content-security-policy', value: 'upgrade-insecure-requests'});
+		e.responseHeaders.push({ name: 'content-security-policy', value: 'upgrade-insecure-requests' });
 	}
-	return {responseHeaders: e.responseHeaders};
+	return { responseHeaders: e.responseHeaders };
 }
 
 chrome.webRequest.onHeadersReceived.addListener(modifyCSP,
-	{urls: ['https://*/*'], types: ['main_frame', 'sub_frame']},
+	{ urls: ['https://*/*'], types: ['main_frame', 'sub_frame'] },
 	['blocking', 'responseHeaders']);
