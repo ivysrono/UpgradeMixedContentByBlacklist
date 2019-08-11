@@ -1,47 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <title>MixedContentHunter Options</title>
+    <script src="options.js"></script>
+    <style type="text/css">
+      table,
+      input,
+      select {
+        width: 100%;
+      }
+    </style>
+  </head>
 
-<head>
-  <title>MixedContentHunter Options</title>
-  <script src="options.js"></script>
-  <style type="text/css">
-    table,
-    input,
-    select {
-      width: 100%;
-    }
-  </style>
-</head>
-
-<body>
-  <h1>MixedContentHunter</h1>
-  <h2>Blacklist</h2>
-  <table>
-    <tr>
-      <td>
-        <input type="text" value="https://github.com/ivysrono/UpgradeMixedContentBlacklist/raw/master/Blacklist.json" id="importURL">
-      </td>
-      <td>
-        <button id="importButton">Import</button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <input type="text" value="" id="newWhitelistDomain">
-      </td>
-      <td>
-        <button id="addButton">Add domain</button>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <select id="excludedDomainsBox" size="10" multiple></select>
-      </td>
-      <td>
-        <button id="removeButton">Remove selected</button>
-      </td>
-    </tr>
-  </table>
-</body>
-
+  <body>
+    <h1>MixedContentHunter</h1>
+    <h2>Blacklist</h2>
+    <table>
+      <tr>
+        <td>
+          <input type="text" value="" id="importURL" />
+        </td>
+        <td>
+          <button id="importButton">Import</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" value="" id="newWhitelistDomain" />
+        </td>
+        <td>
+          <button id="addButton">Add domain or URL</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <select id="excludedDomainsBox" size="10" multiple></select>
+        </td>
+        <td>
+          <button id="removeButton">Remove selected</button>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
