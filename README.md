@@ -34,7 +34,7 @@ No tests for RSS Readers.
 
 [KGS Go Server](https://www.gokgs.com/)
 
-[环球网](https://m.huanqiu.com/r/MV8wXzg3MTg4MDZfMTQyNV8xNDU4MTE0NTQw)
+[环球网](https://w.huanqiu.com/r/MV8wXzg3MTg4MDZfMTQyNV8xNDU4MTE0NTQw)
 
 [环球网](https://w.huanqiu.com/r/MV8wXzI4MjQ4ODNfMTI3XzE0NTgxMDc5NDA)
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "UpgradeMixedContentByBlacklist",
-  "version": "0.3",
+  "version": "0.3.1",
   "description": "Resloves some mixedcontent blocking.",
   "icons": {
     "24": "baseline-enhanced_encryption-24px.svg"
@@ -11,6 +11,8 @@
     "scripts": ["background.js"]
   },
   "options_ui": {
-    "page": "options/options.html"
+    "page": "options/options.html",
+    "browser_style": true,
+    "open_in_tab": true
   }
 }

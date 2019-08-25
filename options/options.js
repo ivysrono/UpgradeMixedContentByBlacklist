@@ -1,6 +1,7 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', function() {
-  const importButton = document.getElementById('importButton'),
+  const buildin_checkbox = document.getElementById('buildin_checkbox'),
+    importButton = document.getElementById('importButton'),
     addButton = document.getElementById('addButton'),
     removeButton = document.getElementById('removeButton'),
     importURL = document.getElementById('importURL'),

@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MixedContentHunter Options</title>
-    <script src="options.js"></script>
-    <style type="text/css">
-      table,
-      input,
-      select {
-        width: 100%;
-      }
-    </style>
-  </head>
 
-  <body>
-    <h1>MixedContentHunter</h1>
-    <h2>Blacklist</h2>
-    <table>
-      <tr>
-        <td>
-          <input type="text" value="" id="importURL" />
-        </td>
-        <td>
-          <button id="importButton">Import</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <input type="text" value="" id="newWhitelistDomain" />
-        </td>
-        <td>
-          <button id="addButton">Add domain or URL</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <select id="excludedDomainsBox" size="10" multiple></select>
-        </td>
-        <td>
-          <button id="removeButton">Remove selected</button>
-        </td>
-      </tr>
-    </table>
-  </body>
+<head>
+  <title>MixedContentHunter Options</title>
+  <script src="options.js"></script>
+  <style type="text/css">
+    table,
+    input,
+    select {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>MixedContentHunter</h1>
+  <h2>
+    <a href="https://github.com/ivysrono/UpgradeMixedContentByBlacklist#build-in-list-tests"> Build-in list</a>
+    <label for="buildinlist">
+      <input type="checkbox" id="buildin_checkbox" style="width:auto" />
+    </label>
+  </h2>
+  <h2>Blacklist</h2>
+  <table>
+    <tr>
+      <td>
+        <input type="text" value="" id="importURL" />
+      </td>
+      <td>
+        <button id="importButton">Import</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" value="" id="newWhitelistDomain" />
+      </td>
+      <td>
+        <button id="addButton">Add domain or URL</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <select id="excludedDomainsBox" size="10" multiple></select>
+      </td>
+      <td>
+        <button id="removeButton">Remove selected</button>
+      </td>
+    </tr>
+  </table>
+</body>
+
 </html>

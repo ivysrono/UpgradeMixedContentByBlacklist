@@ -33,7 +33,6 @@ let buildin_list = [
   'https://www.coolapk.com/apk/',
   'https://potplayer.daum.net/',
   'https://www.gokgs.com/',
-  'https://m.huanqiu.com/r/',
   'https://w.huanqiu.com/r/',
   'https://bbs.kafan.cn/thread-2102542-6-1.html',
   'https://www.leikeji.com/',
@@ -52,11 +51,13 @@ function modifyCSP(e) {
   let uri = document.createElement('a');
   uri.href = e.url;
 
+  //if (document.getElementById('buildin_checkbox').checked) {
   for (let buildin of buildin_list) {
     if (uri.href.startsWith(buildin)) {
       return;
     }
   }
+  //}
 
   if (Number(blacklist[uri.hostname]) === 1) {
     return;
