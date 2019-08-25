@@ -51,13 +51,12 @@ function modifyCSP(e) {
   let uri = document.createElement('a');
   uri.href = e.url;
 
-  //if (document.getElementById('buildin_checkbox').checked) {
+  // ToDo: 与选项联动
   for (let buildin of buildin_list) {
     if (uri.href.startsWith(buildin)) {
       return;
     }
   }
-  //}
 
   if (Number(blacklist[uri.hostname]) === 1) {
     return;

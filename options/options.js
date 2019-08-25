@@ -1,4 +1,5 @@
 'use strict';
+
 document.addEventListener('DOMContentLoaded', function() {
   const buildin_checkbox = document.getElementById('buildin_checkbox'),
     importButton = document.getElementById('importButton'),
@@ -40,6 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     request.send();
   });
+
+  // https://stackoverflow.com/questions/53700008/checkbox-checked-property-always-false
+  const changeStyle = element => {
+    return () => {
+      console.log(element.checked);
+    };
+  };
+  buildin_checkbox.addEventListener('click', changeStyle(buildin_checkbox));
 
   addButton.addEventListener('click', function() {
     localStorage[newWhitelistDomain.value] = 1;
