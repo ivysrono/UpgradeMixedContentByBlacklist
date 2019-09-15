@@ -19,31 +19,6 @@
 */
 'use strict';
 
-let buildin_list = [
-  'https://feedly.com/',
-  'https://newsblur.com/',
-  'https://www.newsblur.com/',
-  'https://theoldreader.com/',
-  'https://www.yilan.io/',
-
-  'https://home.baidu.com/',
-  'https://www.bianews.com/',
-  'https://www.cnblogs.com/qianguyihao/',
-  'https://coolapk.com/apk/',
-  'https://www.coolapk.com/apk/',
-  'https://potplayer.daum.net/',
-  'https://www.gokgs.com/',
-  'https://w.huanqiu.com/r/',
-  'https://bbs.kafan.cn/thread-2102542-6-1.html',
-  'https://www.leikeji.com/',
-  'https://www.lihua.com/',
-  'https://www.qdaily.com/',
-  'https://m.qdaily.com/',
-  'https://y.qq.com/',
-  'https://www.v2ex.com/t/462280',
-  'https://baoming.yikeweiqi.com/'
-];
-
 let blacklist = localStorage;
 
 function modifyCSP(e) {
@@ -52,8 +27,8 @@ function modifyCSP(e) {
   uri.href = e.url;
 
   // ToDo: 与选项联动
-  for (let buildin of buildin_list) {
-    if (uri.href.startsWith(buildin)) {
+  for (let b of buildin_list) {
+    if (uri.href.startsWith(b)) {
       return;
     }
   }
@@ -84,7 +59,7 @@ function modifyCSP(e) {
   return { responseHeaders: e.responseHeaders };
 }
 
-chrome.webRequest.onHeadersReceived.addListener(
+browser.webRequest.onHeadersReceived.addListener(
   modifyCSP,
   { urls: ['https://*/*'], types: ['main_frame', 'sub_frame'] },
   ['blocking', 'responseHeaders']
