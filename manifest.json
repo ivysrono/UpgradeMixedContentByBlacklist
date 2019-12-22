@@ -1,10 +1,11 @@
 {
   "manifest_version": 2,
   "name": "UpgradeMixedContentByBlacklist",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Resloves some mixedcontent blocking.",
   "icons": {
-    "24": "baseline-enhanced_encryption-24px.svg"
+    "48": "baseline_enhanced_encryption_black_48dp.png",
+    "96": "baseline_enhanced_encryption_black_96dp.png"
   },
   "permissions": ["https://*/*", "webRequest", "webRequestBlocking"],
   "background": {
