@@ -11,8 +11,6 @@ let buildin_list = [
   'https://coolapk.com/apk/',
   'https://www.coolapk.com/apk/',
   'https://potplayer.daum.net/',
-  'https://www.gokgs.com/',
-  'https://w.huanqiu.com/r/',
   'https://bbs.kafan.cn/thread-2102542-6-1.html',
   'https://www.leikeji.com/',
   'https://www.lihua.com/',
